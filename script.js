@@ -47,7 +47,6 @@ nuclearFacilities.forEach(facility => {
     Status: ${facility.status}<br/>
     Reactor Type: ${facility.type}<br/>
     Start Year: ${facility.year}<br/>
-    Shut Down: ${facility.shutdown}
   `);
 });
 
