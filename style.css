@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: #0b0c10;
+    color: #66fcf1;
+    font-family: "Consolas", "Courier New", monospace;
+    padding: 20px;
+  }
+  
+  #map {
+    flex: 1;
+    height: 100%;
+  }
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: 10%;
+  min-height: 40px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 2.5;
+  font-weight: bold;
+}
+
+footer {
+  height: 5%;
+  min-height: 30px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 2.0;
+  font-weight: bold;
+}
+
+#content {
+  display: flex;
+  flex: 1;
+  height: 84%;
+  width: 100%;
+  color: yellow;
+}
+
+#left-panel,
+#right-panel {
+  width: 20%;
+  min-width: 120px;
+  background-color: black;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#map {
+  flex: 1;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column;
+  }
+
+  #left-panel,
+  #right-panel {
+    width: 100%;
+    height: 20%;
+    min-width: 0;
+  }
+
+  #map {
+    height: 60%;
+    width: 100%;
+  }
+}
+
+  #reddit-posts {
+    background-color: #1f2833;
+    border: 2px solid #45a29e;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px #66fcf1;
+  }
+    #reddit-posts ul {
+      list-style-type: none; /* Remove default bullets */
+      padding-left: 0;
+    }
+
+        /* Individual list item styling */
+    #reddit-posts li {
+      position: relative;
+      margin: 15px 0;
+      padding-left: 30px;
+      font-size: 18px;
+    }
+
+        /* Custom bullet (glowing dot) */
+    #reddit-posts li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 12px;
+      height: 12px;
+      background-color: #66fcf1;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #45a29e;
+    }
+
+        /* Link styling */
+    #reddit-posts a {
+      color: #66fcf1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    #reddit-posts a:hover {
+      color: #c5c6c7;
+    }
+        #nuclear-news {
+      background-color: #1f2833;
+      border: 2px solid #45a29e;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 20px #66fcf1;
+    }
+
+    #nuclear-news ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #nuclear-news li {
+      position: relative;
+      margin: 15px 0;
+      padding-left: 30px;
+      font-size: 18px;
+    }
+
+    #nuclear-news li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 12px;
+      height: 12px;
+      background-color: #66fcf1;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #45a29e;
+    }
+
+    #nuclear-news a {
+      color: #66fcf1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    #nuclear-news a:hover {
+      color: #c5c6c7;
+    }

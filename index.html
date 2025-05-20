@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuclear Facilities Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="container">
+
+  <div id="content">
+    <aside id="left-panel">
+      <h2>Latest r/nuclear posts on Reddit</h2><br/>
+      <div id="reddit-posts">Loading...</div>
+    </aside>
+    <div id="map"></div>
+    <aside id="right-panel">
+      <h2>Latest Nuclear Power News</h2><br/>
+      <div id="nuclear-news">Loading nuclear news...</div>
+
+    </aside>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
