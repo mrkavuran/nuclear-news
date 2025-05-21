@@ -17,23 +17,32 @@
   </script>
 </head>
 <body>
-  <div id="container">
+    <div id="container">
 
-  <div id="content">
-    <aside id="left-panel">
-      <h2>Latest r/nuclear posts on Reddit</h2><br/>
-      <div id="reddit-posts">Loading...</div>
-    </aside>
-    <div id="map"></div>
-    <aside id="right-panel">
-      <h2>Latest Nuclear Power News</h2><br/>
-      <div id="nuclear-news">Loading nuclear news...</div>
+      <div id="content">
 
-    </aside>
-  </div>
-</div>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="data.js"></script>
-<script src="script.js"></script>
+        <details id="mobile-dropdowns" style="display: none;">
+          <summary>Reddit Posts</summary>
+          <div id="mobile-reddit-posts">Loading...</div>
+        </details>
+
+        <details id="mobile-dropdowns-news" style="display: none;">
+          <summary>Nuclear News</summary>
+          <div id="mobile-nuclear-news">Loading...</div>
+        </details>
+        <aside id="left-panel">
+          <h2>Latest r/nuclear posts on Reddit</h2><br/>
+          <div id="reddit-posts">Loading...</div>
+        </aside>
+        <div id="map"></div>
+        <aside id="right-panel">
+          <h2>Latest Nuclear Power News</h2><br/>
+          <div id="nuclear-news">Loading nuclear news...</div>
+        </aside>
+      </div>
+    </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
