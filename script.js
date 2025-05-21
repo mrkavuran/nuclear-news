@@ -125,4 +125,3 @@ document.getElementById("mobile-reddit-posts").innerHTML = document.getElementBy
 
 // After populating the desktop news section
 document.getElementById("mobile-nuclear-news").innerHTML = document.getElementById("nuclear-news").innerHTML;
-
