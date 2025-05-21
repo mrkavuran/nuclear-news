@@ -69,6 +69,26 @@ nuclearFacilities.forEach(facility => {
       // Insert the generated HTML into the container
       document.getElementById("reddit-posts").innerHTML = html;
     });
+
+  // Fetch the latest posts from the 'technology' subreddit (you can change it)
+  fetch("https://www.reddit.com/r/nuclear/new.json?limit=10") // 'limit=10' fetches 10 posts
+    .then(response => response.json()) // Parse the JSON response
+    .then(data => {
+      let html = '<ul>'; // Start an unordered list
+
+      // Loop through each post
+      data.data.children.forEach(item => {
+        const post = item.data; // Get the actual post data
+
+        // Add each post as a list item with a clickable link
+        html += `<li><a href="https://reddit.com${post.permalink}" target="_blank">${post.title}</a></li>`;
+      });
+
+      html += '</ul>'; // End the unordered list
+
+      // Insert the generated HTML into the container
+      document.getElementById("mobile-reddit-posts").innerHTML = html;
+    });
 const rssUrl = 'https://news.google.com/rss/search?q=nuclear+power&hl=en-US&gl=US&ceid=US:en';
 const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
@@ -85,3 +105,24 @@ fetch(apiUrl)
   .catch(() => {
     document.getElementById('nuclear-news').innerHTML = 'Failed to load news.';
   });
+
+fetch(apiUrl)
+  .then(res => res.json())
+  .then(data => {
+    let html = '<ul class="news-list">';
+    data.items.slice(0, 10).forEach(item => {
+      html += `<li><a href="${item.link}" target="_blank">${item.title}</a></li>`;
+    });
+    html += '</ul>';
+    document.getElementById('mobile-nuclear-news').innerHTML = html;
+  })
+  .catch(() => {
+    document.getElementById('mobile-nuclear-news').innerHTML = 'Failed to load news.';
+  });
+
+// After populating the desktop Reddit section
+document.getElementById("mobile-reddit-posts").innerHTML = document.getElementById("reddit-posts").innerHTML;
+
+// After populating the desktop news section
+document.getElementById("mobile-nuclear-news").innerHTML = document.getElementById("nuclear-news").innerHTML;
+
