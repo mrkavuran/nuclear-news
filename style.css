@@ -75,21 +75,62 @@ footer {
     width: 100%;
   }
 }
+      #mobile-nuclear-news, #nuclear-news {
+      background-color: #1f2833;
+      border: 2px solid #45a29e;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 20px #66fcf1;
+    }
 
-  #reddit-posts {
+    #mobile-nuclear-news ul, #nuclear-news ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    #mobile-nuclear-news li, #nuclear-news li {
+      position: relative;
+      margin: 15px 0;
+      padding-left: 30px;
+      font-size: 18px;
+    }
+
+    #mobile-nuclear-news li::before, #nuclear-news li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 12px;
+      height: 12px;
+      background-color: #66fcf1;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #45a29e;
+    }
+
+    #mobile-nuclear-news a, #nuclear-news a {
+      color: #66fcf1;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    #mobile-nuclear-news a:hover, #nuclear-news a:hover {
+      color: #c5c6c7;
+    }
+
+   #mobile-reddit-posts, #reddit-posts {
     background-color: #1f2833;
     border: 2px solid #45a29e;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 20px #66fcf1;
   }
-    #reddit-posts ul {
+    #mobile-reddit-posts ul, #reddit-posts ul {
       list-style-type: none; /* Remove default bullets */
       padding-left: 0;
     }
 
         /* Individual list item styling */
-    #reddit-posts li {
+    #mobile-reddit-posts li, #reddit-posts li {
       position: relative;
       margin: 15px 0;
       padding-left: 30px;
@@ -97,7 +138,7 @@ footer {
     }
 
         /* Custom bullet (glowing dot) */
-    #reddit-posts li::before {
+    #mobile-reddit-posts li::before, #reddit-posts li::before {
       content: '';
       position: absolute;
       left: 0;
@@ -110,91 +151,40 @@ footer {
     }
 
         /* Link styling */
-    #reddit-posts a {
+    #mobile-reddit-posts a, #reddit-posts a {
       color: #66fcf1;
       text-decoration: none;
       transition: color 0.3s;
     }
 
-    #reddit-posts a:hover {
+    #mobile-reddit-posts a:hover, #reddit-posts a:hover {
       color: #c5c6c7;
     }
-        #nuclear-news {
-      background-color: #1f2833;
-      border: 2px solid #45a29e;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 20px #66fcf1;
-    }
-
-    #nuclear-news ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    #nuclear-news li {
-      position: relative;
-      margin: 15px 0;
-      padding-left: 30px;
-      font-size: 18px;
-    }
-
-    #nuclear-news li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 7px;
-      width: 12px;
-      height: 12px;
-      background-color: #66fcf1;
-      border-radius: 50%;
-      box-shadow: 0 0 8px #45a29e;
-    }
-
-    #nuclear-news a {
-      color: #66fcf1;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    #nuclear-news a:hover {
-      color: #c5c6c7;
-    }
+  
+#mobile-dropdowns {
+  display: none;
+  margin: 10px;
+  color: #66fcf1;
+}
 
 @media (max-width: 768px) {
+  #left-panel, #right-panel {
+    display: none;
+  }
+
+  #mobile-dropdowns,
+  #mobile-dropdowns-news {
+    display: block !important;
+    margin: 10px;
+    color: #66fcf1;
+  }
+
   #content {
     flex-direction: column;
   }
 
-  #left-panel,
-  #right-panel {
-    width: 100%;
-    height: auto;
-    min-width: 0;
-  }
-
   #map {
-    height: 300px;
     width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  #reddit-posts,
-  #nuclear-news {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  #reddit-posts li,
-  #nuclear-news li {
-    font-size: 1rem;
-    padding-left: 25px;
-  }
-
-  #reddit-posts li::before,
-  #nuclear-news li::before {
-    width: 10px;
-    height: 10px;
-    top: 5px;
+    height: 60vh;
   }
 }
