@@ -1,7 +1,7 @@
 //soruce: https://en.wikipedia.org/wiki/List_of_nuclear_power_stations
 
 const nuclearFacilities = [
-  { name: "Akademik Lomonosov", country: "Russia", status: "Active", year: 2020, lat: 69.7097, lng: 170.3061 },
+  { name: "Akademik Lomonosov", type: "PWR", country: "Russia", status: "Active", year: 2020, lat: 69.7097, lng: 170.3061 },
   { name: "Almaraz", country: "Spain", status: "Active", year: 1981, lat: 39.80806, lng: -5.69694 },
   { name: "Angra", country: "Brazil", status: "Active", year: 1985, lat: -23.00833, lng: -44.47389 },
   { name: "ANO", country: "United States", status: "Active", year: 1974, lat: 35.31028, lng: -93.23139 },
